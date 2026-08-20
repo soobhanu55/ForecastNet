@@ -23,6 +23,12 @@ The model is trained on historical sales data from the [Kaggle Predict Future Sa
 
 ![Terminal recording of the evaluation results and the bug found](docs/demo.gif)
 
+The repo also ships a separate, older Flask app (`app.py`, port 9457) for a classic Big Mart Sales linear-regression demo — unrelated to the deep-learning forecasting above, but real and running:
+
+![UI walkthrough of the Big Mart sales prediction form](docs/demo_ui.gif)
+
+Filling in the item/outlet fields and submitting returns a genuine prediction from the pickled `LinearRegression` model. Loading that model under a current scikit-learn actually crashed (`'LinearRegression' object has no attribute 'positive'` — the pickle predates that constructor parameter); fixed in `app.py` by restoring the attribute to scikit-learn's own historical default (`False`) rather than silently swallowing the error.
+
 ## Evaluation
 
 Four architectures (MLP, CNN, LSTM, CNN-LSTM) were trained and scored on a held-out validation split (RMSE, real output already saved in the notebook's cells 53-56):

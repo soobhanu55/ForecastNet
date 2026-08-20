@@ -52,6 +52,11 @@ def result():
         
         # Load and apply the model
         model = joblib.load(model_path)
+        # The pickle predates scikit-learn's `positive` param on LinearRegression;
+        # restore it to sklearn's own historical default so predict() doesn't
+        # crash with AttributeError under newer scikit-learn versions.
+        if not hasattr(model, "positive"):
+            model.positive = False
         Y_pred = model.predict(X_std)
         
         # Format the prediction with 2 decimal places
