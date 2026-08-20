@@ -17,6 +17,12 @@ DeepSales is a high-performance sales forecasting engine designed to predict tot
 ## 📊 Data Source
 The model is trained on historical sales data from the [Kaggle Predict Future Sales Competition](https://www.kaggle.com/competitions/competitive-data-science-predict-future-sales/data).
 
+## Demo
+
+`print_results.py` presents the real evaluation numbers and the real bug found, both already sitting in the notebook's own output cells:
+
+![Terminal recording of the evaluation results and the bug found](docs/demo.gif)
+
 ## 📈 Evaluation
 
 Four architectures (MLP, CNN, LSTM, CNN-LSTM) were trained and scored on a held-out validation split (RMSE, real output already saved in the notebook's cells 53-56):
