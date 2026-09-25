@@ -4,7 +4,7 @@
 DeepSales is a high-performance sales forecasting engine designed to predict total monthly product sales across multiple stores. Built on the "Predict Future Sales" dataset from Kaggle, the project addresses the complexities of real-world retail data, including fluctuating inventory and store lists.
 
 ## Key Features
-* **Time Series Forecasting**: Leverages historical daily data to predict future monthly demand.
+* **Time Series Forecasting**: Leverages historical daily data to predict future monthly demand.  
 * **Robust Model Architecture**: Implements advanced Deep Learning models (CNN-LSTM) capable of handling non-stationary time series data.
 * **Feature Engineering**: Includes sophisticated preprocessing to manage changing lists of shops and products over time.
 * **Sequence Modeling**: Utilizes data reshaping into subsequences for optimized neural network training.
